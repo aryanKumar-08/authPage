@@ -1,4 +1,11 @@
+import { useNavigate } from "react-router-dom";
+
 export default function Register() {
+    const navigate = useNavigate();
+    const handleRegister = () => {
+    
+        navigate("/account"); 
+     };
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-teal-100 via-blue-100 to-purple-100">
       <div className="backdrop-blur-xl bg-white/60 rounded-3xl shadow-xl p-8 w-full max-w-md mx-4">
@@ -28,7 +35,7 @@ export default function Register() {
           </div>
         </div>
 
-        <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-xl transition-all">
+        <button onClick={handleRegister}  className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-xl transition-all">
           Create Account
         </button>
       </div>
